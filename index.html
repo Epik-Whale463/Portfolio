@@ -216,6 +216,109 @@
             margin-top: 1rem;
             display: inline-block;
         }
+
+                /* Extra styles for Super Mobile Responsiveness */
+
+        @media screen and (max-width: 992px) {
+            /* Navbar adjustments */
+            .navbar-nav .nav-link {
+                margin: 0.5rem 0; /* Reduce margin on smaller screens */
+            }
+
+            .navbar-collapse {
+                background-color: rgba(255, 255, 255, 0.9); /* Add background to collapsed menu */
+                padding: 1rem;
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            /* Hero section adjustments */
+            .hero {
+                padding: 3rem 1rem; /* Reduce padding */
+            }
+
+            .hero-title {
+                font-size: 3rem; /* Reduce font size */
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem; /* Reduce font size */
+            }
+
+            .hero-description {
+                font-size: 1rem; /* Reduce font size */
+            }
+
+            .hero-content {
+                padding: 2rem;
+            }
+
+            .d-flex.justify-content-center.gap-3 {
+                flex-direction: column; /* Stack buttons vertically */
+                gap: 1rem !important;
+            }
+            .resume-button{
+                width: 50%;
+                margin-left: 25%;
+            }
+
+            /* About section adjustments */
+            #about .col-md-4 {
+                text-align: center; /* Center profile image */
+                margin-bottom: 2rem;
+            }
+            #about .col-md-8{
+                text-align: center;
+            }
+
+            /* Project card adjustments */
+            .project-card {
+                padding: 1.5rem; /* Reduce padding */
+            }
+
+            .project-title {
+                font-size: 1.3rem; /* Reduce font size */
+            }
+
+            /* Section title adjustments */
+            .section-title {
+                font-size: 2rem; /* Reduce font size */
+                margin-bottom: 2rem; /* Reduce margin */
+            }
+            .contact-section {
+                padding: 2rem;
+            }
+            .contact-info p {
+                font-size: 1rem;
+            }
+            .social-icon {
+                font-size: 1.8rem;
+                margin: 0 1rem;
+            }
+
+        }
+
+        @media screen and (max-width: 576px) {
+            /* Further adjustments for very small screens */
+            .hero-title {
+                font-size: 2.5rem; /* Reduce font size */
+            }
+
+            .project-icon {
+                margin-bottom: 0.5rem; /* Reduce margin */
+            }
+            .resume-button{
+                width: 75%;
+                margin-left: 12.5%;
+            }
+
+            .skill-badge {
+                padding: 0.4rem 1rem; /* Reduce padding */
+                font-size: 0.9rem; /* Reduce font size */
+            }
+        }
+        
     </style>
 </head>
 <body>

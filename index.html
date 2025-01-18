@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Portfolio - [Your Name]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #6c5ce7;
+            --gradient-start: #a8c0ff;
+            --gradient-end: #3f2b96;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            margin: 0 1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            animation: wave 8s infinite linear;
+            z-index: 0;
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(45deg) translate(-50%, -50%); }
+            100% { transform: rotate(45deg) translate(50%, 50%); }
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent-color), #74b9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .hero-description {
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-icon {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-links {
+            margin-top: auto;
+        }
+
+        .skill-badge {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 0.25rem;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            font-weight: 500;
+        }
+
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .contact-section {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .social-icons {
+            text-align: center;
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin: 0 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: var(--primary-color);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+        .resume-button {
+            margin-top: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">RamaCharan.ai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm Charan</h1>
+            <p class="hero-subtitle">AI/ML Engineer | Data Scientist | AI Enthusiast</p>
+            <p class="hero-description">
+                Passionate about leveraging Artificial Intelligence and Machine Learning to solve complex problems and create innovative solutions.
+                I specialize in developing, implementing, and maintaining intelligent systems that drive business value and efficiency.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+                <a href="#contact" class="btn btn-outline-primary btn-lg">Contact Me</a>
+            </div>
+            <a href="[Your Resume Link]" class="btn btn-secondary btn-lg resume-button" target="_blank">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+    </section>
+
+    <div class="container mt-5">
+        <section id="about" class="py-5">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="[Your Profile Image URL]" alt="Your Name" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I'm a dedicated AI/ML Engineer with a strong foundation in computer science and a passion for data-driven decision making. My expertise lies in creating machine learning models, deep learning systems, and statistical analysis tools. I'm experienced in the full lifecycle of AI projects, from conception and data collection to model deployment and performance monitoring.
+                    </p>
+                    <p>
+                        My journey in AI began with [Your First Encounter with AI/ML, e.g., a university project, a personal interest, etc.]. This sparked my interest in [Specific Areas of AI, e.g., natural language processing, computer vision, reinforcement learning], and since then, I've been committed to continuous learning and development in this ever-evolving field.
+                    </p>
+                    <p>
+                        I hold a [Your Degree] in [Your Major] from [Your University], where I focused on [Relevant Coursework or Specializations]. I've also completed several certifications in [Specific Technologies or Methodologies, e.g., TensorFlow, PyTorch, AWS Machine Learning].
+                    </p>
+                    <p>
+                        I'm always eager to tackle new challenges and collaborate on projects that push the boundaries of what's possible with AI. I believe in the power of AI to transform industries and improve lives, and I'm excited to be part of this transformative journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-5">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-brain fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">Deep Learning for Image Classification</h3>
+                        <p class="project-description">
+                            Developed a deep convolutional neural network for image classification using TensorFlow and Keras. Achieved 95% accuracy on the CIFAR-10 dataset. Implemented data augmentation and transfer learning techniques to improve model robustness and performance.
+                        </p>
+                        <p><b>Technologies:</b> TensorFlow, Keras, Python, OpenCV</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-robot fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">NLP Sentiment Analysis Tool</h3>
+                        <p class="project-description">
+                            Built an NLP tool using PyTorch and spaCy to perform sentiment analysis on social media data. The model classifies text into positive, negative, and neutral sentiments with 88% accuracy. Deployed the model as a REST API using Flask.
+                        </p>
+                        <p><b>Technologies:</b> PyTorch, spaCy, Flask, Python, NLTK</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">Time Series Forecasting for Stock Prices</h3>
+                        <p class="project-description">
+                            Developed a time series forecasting model using LSTM networks to predict stock prices. Utilized historical data from the S&P 500 index. Achieved a Mean Absolute Error (MAE) of 5.2, demonstrating high predictive accuracy.
+                        </p>
+                        <p><b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn, TensorFlow</p>
+
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="project-card">
+                      <div class="project-icon">
+                          <i class="fas fa-hand-holding-heart fa-3x"></i>
+                      </div>
+                      <h3 class="project-title">Personalized Recommendation Engine</h3>
+                      <p class="project-description">
+                          Engineered a content-based recommendation system using collaborative filtering techniques. Integrated user preferences and item features to provide personalized recommendations, increasing user engagement by 30%.
+                      </p>
+                      <p><b>Technologies:</b> Python, Surprise, Pandas, Scikit-learn</p>
+                      <div class="project-links">
+                          <a href="#" class="btn btn-outline-primary me-2">
+                              <i class="fab fa-github"></i> GitHub
+                          </a>
+                          <a href="#" class="btn btn-primary">
+                              <i class="fas fa-external-link-alt"></i> Demo
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-network fa-3x"></i>
+                    </div>
+                    <h3 class="project-title">Anomaly Detection in Network Traffic</h3>
+                    <p class="project-description">
+                        Implemented an anomaly detection system using Isolation Forest and One-Class SVM to identify unusual patterns in network traffic. Successfully detected 99% of the anomalies, reducing security threats and enhancing network security.
+                    </p>
+                    <p><b>Technologies:</b> Python, Scikit-learn, NetworkX</p>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-outline-primary me-2">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="text-center mb-5">
+            My technical skillset is diverse and continually expanding, encompassing a wide range of programming languages, frameworks, tools, and methodologies. I strive to stay at the forefront of technological advancements, ensuring I can leverage the most effective solutions for any given challenge. Below is an overview of my core competencies:
+        </p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">Programming Languages</h3>
+                    <p class="mb-3">
+                        I have hands-on experience with a variety of programming languages, enabling me to choose the most suitable language for each project. My proficiency levels are as follows:
+                    </p>
+                    <div>
+                        <span class="skill-badge">Python (Expert)</span>
+                        <span class="skill-badge">R (Proficient)</span>
+                        <span class="skill-badge">SQL (Expert)</span>
+                        <span class="skill-badge">Java (Intermediate)</span>
+                        <span class="skill-badge">C++ (Intermediate)</span>
+                        <span class="skill-badge">JavaScript (Proficient)</span>
+                        <span class="skill-badge">Scala (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">Machine Learning Frameworks</h3>
+                    <p class="mb-3">
+                        I am well-versed in the leading machine learning frameworks, allowing me to build, train, and deploy robust models efficiently. My experience includes:
+                    </p>
+                    <div>
+                        <span class="skill-badge">TensorFlow (Expert)</span>
+                        <span class="skill-badge">PyTorch (Expert)</span>
+                        <span class="skill-badge">Scikit-learn (Expert)</span>
+                        <span class="skill-badge">Keras (Proficient)</span>
+                        <span class="skill-badge">Pandas (Expert)</span>
+                        <span class="skill-badge">NumPy (Expert)</span>
+                        <span class="skill-badge">XGBoost (Proficient)</span>
+                        <span class="skill-badge">LightGBM (Proficient)</span>
+                        <span class="skill-badge">CatBoost (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">Data Visualization</h3>
+                    <p class="mb-3">
+                        I specialize in creating clear and insightful visualizations to communicate complex data effectively. I have practical experience using:
+                    </p>
+                    <div>
+                        <span class="skill-badge">Matplotlib (Expert)</span>
+                        <span class="skill-badge">Seaborn (Expert)</span>
+                        <span class="skill-badge">Plotly (Proficient)</span>
+                        <span class="skill-badge">Tableau (Proficient)</span>
+                        <span class="skill-badge">Power BI (Intermediate)</span>
+                        <span class="skill-badge">D3.js (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">Big Data Technologies</h3>
+                    <p class="mb-3">
+                        I possess a strong understanding of big data technologies, enabling me to manage and analyze large datasets efficiently. My expertise includes:
+                    </p>
+                    <div>
+                        <span class="skill-badge">Hadoop (Proficient)</span>
+                        <span class="skill-badge">Spark (Proficient)</span>
+                        <span class="skill-badge">Hive (Intermediate)</span>
+                        <span class="skill-badge">Kafka (Intermediate)</span>
+                        <span class="skill-badge">Elasticsearch (Intermediate)</span>
+                        <span class="skill-badge">Cassandra (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">Cloud Platforms</h3>
+                    <p class="mb-3">
+                        I am experienced in leveraging cloud platforms for scalable and cost-effective AI/ML solutions. My proficiency spans across:
+                    </p>
+                    <div>
+                        <span class="skill-badge">AWS (SageMaker, EC2, S3) (Proficient)</span>
+                        <span class="skill-badge">Google Cloud (AI Platform, Compute Engine, Cloud Storage) (Proficient)</span>
+                        <span class="skill-badge">Azure (Machine Learning Studio, Virtual Machines, Blob Storage) (Intermediate)</span>
+                        <span class="skill-badge">Docker (Proficient)</span>
+                        <span class="skill-badge">Kubernetes (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="project-card text-center">
+                    <h3 class="mb-4">DevOps & Other Tools</h3>
+                    <p class="mb-3">
+                       I am proficient in utilizing various DevOps tools and methodologies to streamline the development and deployment process. My skills include:
+                    </p>
+                    <div>
+                        <span class="skill-badge">Git (Expert)</span>
+                        <span class="skill-badge">Jenkins (Intermediate)</span>
+                        <span class="skill-badge">CI/CD Pipelines (Proficient)</span>
+                        <span class="skill-badge">Linux/Unix (Proficient)</span>
+                        <span class="skill-badge">REST APIs (Expert)</span>
+                        <span class="skill-badge">Agile/Scrum Methodologies (Expert)</span>
+                        <span class="skill-badge">MLflow (Proficient)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-5">
+        <div class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-info">
+                        <p class="lead">Let's collaborate on your next AI project or discuss how AI/ML can transform your business!</p>
+                        <p>Email: <a href="mailto:pvrcharan2022@gmail.com">pvrcharan2022@gmail.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/rama-charan-50425021b/" target="_blank">linkedin.com/in/ramacharan</a></p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rama-charan-50425021b/" class="social-icon" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="[Your GitHub Profile URL]" class="social-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="[Your Twitter Profile URL]" class="social-icon" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="text-center">
+    <div class="container">
+        <p>&copy; 2024 RamaCharan. All rights reserved. | Designed with <i class="fas fa-heart text-danger"></i> by [Your Name]</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<style>
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  .timeline ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+    transform: translateX(-50%);
+  }
+
+  .timeline-container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+
+  .timeline-container.left {
+    left: 0;
+    text-align: right;
+  }
+
+  .timeline-container.right {
+    left: 50%;
+    text-align: left;
+  }
+
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background-color: #fff;
+    border: 2px solid var(--accent-color);
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+  .timeline-container.right::after {
+    left: -8px;
+  }
+
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background-color: #ddd;
+    z-index: 1;
+  }
+
+  .timeline-container.right::before {
+    left: 8px;
+  }
+
+  .timeline-content {
+    padding: 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .timeline-content li {
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .timeline::before {
+      left: 90px;
+    }
+
+    .timeline-container {
+      width: 100%;
+      padding-left: 120px;
+      padding-right: 30px;
+    }
+
+    .timeline-container.right {
+      left: 0;
+    }
+
+    .timeline-container.left::after,
+    .timeline-container.right::after {
+      left: 82px;
+    }
+
+    .timeline-container.left::before,
+    .timeline-container.right::before {
+      left: 100px;
+      width: 20px;
+    }
+
+    .timeline-container.left,
+    .timeline-container.right {
+      text-align: left;
+    }
+  }
+</style>
+</body>
+</html>

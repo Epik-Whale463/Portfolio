@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RamaCharan.ai - AI/ML Engineer Portfolio showcasing projects and expertise in artificial intelligence and machine learning">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Portfolio, Data Science">
+    <meta name="author" content="RamaCharan">
+    <title>RamaCharan.ai | AI/ML Engineer</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom cursors -->
+    <div class="cursor" role="presentation" aria-hidden="true"></div>
+    <div class="cursor-follower" role="presentation" aria-hidden="true"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" data-nav-status="toggle" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-text="RamaCharan.ai" aria-label="RamaCharan.ai">
+                <span class="text-wrapper">RamaCharan.ai</span>
+                <span class="hover-text" aria-hidden="true">RC.ai</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link magnetic" href="#home"  aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magnetic" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magnetic" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magnetic" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link magnetic" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="Introduction">
+        <div class="glitch-wrapper">
+            <h1 class="glitch-text" data-text="Hello, I'm Charan">Hello, I'm Charan</h1>
+        </div>
+        <div class="hero-content">
+            <div class="typing-wrapper" aria-live="polite">
+                <span class="typed-text"></span>
+                <span class="cursor-typing" aria-hidden="true">&nbsp;</span>
+            </div>
+            <p class="hero-description reveal-text">
+                Passionate about leveraging Artificial Intelligence and Machine Learning to solve complex problems and create innovative solutions.
+            </p>
+            <div class="cta-wrapper">
+                <a href="#projects" class="btn btn-primary btn-lg magnetic" role="button">
+                    <span>View Projects</span>
+                    <div class="btn-fill" aria-hidden="true"></div>
+                </a>
+                <a href="#contact" class="btn btn-outline-primary btn-lg magnetic" role="button">
+                    <span>Contact Me</span>
+                    <div class="btn-fill" aria-hidden="true"></div>
+                </a>
+            </div>
+            <a href="[Your Resume Link]" class="btn btn-secondary btn-lg resume-button magnetic" target="_blank" rel="noopener" role="button">
+                <span><i class="fas fa-download" aria-hidden="true"></i><span class="visually-hidden">Download</span> Resume</span>
+                <div class="btn-fill" aria-hidden="true"></div>
+            </a>
+        </div>
+        <div class="hero-background" aria-hidden="true">
+            <div class="particles-wrapper"></div>
+            <canvas id="matrix-rain"></canvas>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <!-- About Section -->
+        <section id="about" class="py-5" aria-labelledby="about-title">
+            <h2 id="about-title" class="section-title ">About Me</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image-wrapper magnetic">
+                        <img src="[Your Profile Image URL]" alt="RamaCharan - AI/ML Engineer" class="img-fluid rounded-circle hover-effect">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="about-content ">
+                        <p>
+                            I'm a dedicated AI/ML Engineer with a strong foundation in computer science and a passion for data-driven decision making. My expertise lies in creating machine learning models, deep learning systems, and statistical analysis tools. I'm experienced in the full lifecycle of AI projects, from conception and data collection to model deployment and performance monitoring.
+                        </p>
+                        <p>
+                            My journey in AI began with [Your First Encounter with AI/ML]. This sparked my interest in [Specific Areas of AI], and since then, I've been committed to continuous learning and development in this ever-evolving field.
+                        </p>
+                        <p>
+                            I hold a [Your Degree] in [Your Major] from [Your University], where I focused on [Relevant Coursework or Specializations]. I've also completed several certifications in [Specific Technologies or Methodologies].
+                        </p>
+                        <p>
+                            I'm always eager to tackle new challenges and collaborate on projects that push the boundaries of what's possible with AI. I believe in the power of AI to transform industries and improve lives, and I'm excited to be part of this transformative journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5" aria-labelledby="projects-title">
+            <h2 id="projects-title" class="section-title ">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="project-card hover-effect">
+                        <div class="project-icon" aria-hidden="true">
+                            <i class="fas fa-brain fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">Deep Learning for Image Classification</h3>
+                        <p class="project-description">
+                            Developed a deep convolutional neural network for image classification using TensorFlow and Keras. Achieved 95% accuracy on the CIFAR-10 dataset. Implemented data augmentation and transfer learning techniques to improve model robustness and performance.
+                        </p>
+                        <p><b>Technologies:</b> TensorFlow, Keras, Python, OpenCV</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2 magnetic" rel="noopener">
+                                <span><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                            <a href="#" class="btn btn-primary magnetic" rel="noopener">
+                                <span><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="project-card hover-effect">
+                        <div class="project-icon" aria-hidden="true">
+                            <i class="fas fa-robot fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">NLP Sentiment Analysis Tool</h3>
+                        <p class="project-description">
+                            Built an NLP tool using PyTorch and spaCy to perform sentiment analysis on social media data. The model classifies text into positive, negative, and neutral sentiments with 88% accuracy. Deployed the model as a REST API using Flask.
+                        </p>
+                        <p><b>Technologies:</b> PyTorch, spaCy, Flask, Python, NLTK</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2 magnetic" rel="noopener">
+                                <span><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                            <a href="#" class="btn btn-primary magnetic" rel="noopener">
+                                <span><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="project-card hover-effect">
+                        <div class="project-icon" aria-hidden="true">
+                            <i class="fas fa-chart-line fa-3x"></i>
+                        </div>
+                        <h3 class="project-title">Time Series Forecasting</h3>
+                        <p class="project-description">
+                            Developed a time series forecasting model using LSTM networks to predict stock prices. Utilized historical data from the S&P 500 index. Achieved a Mean Absolute Error (MAE) of 5.2, demonstrating high predictive accuracy.
+                        </p>
+                        <p><b>Technologies:</b> Python, Pandas, NumPy, Scikit-learn, TensorFlow</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline-primary me-2 magnetic" rel="noopener">
+                                <span><i class="fab fa-github" aria-hidden="true"></i> GitHub</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                            <a href="#" class="btn btn-primary magnetic" rel="noopener">
+                                <span><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</span>
+                                <div class="btn-fill" aria-hidden="true"></div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-5" aria-labelledby="skills-title">
+            <h2 id="skills-title" class="section-title ">Technical Skills</h2>
+            <div class="skills-intro">
+                <p class="text-center mb-5">
+                    My technical skillset is diverse and continually expanding, encompassing a wide range of programming languages, frameworks, tools, and methodologies.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-card hover-effect">
+                        <h3 class="skill-category">Programming Languages</h3>
+                        <div class="skill-tags" role="list">
+                            <span class="skill-tag" role="listitem">Python</span>
+                            <span class="skill-tag" role="listitem">R</span>
+                            <span class="skill-tag" role="listitem">SQL</span>
+                            <span class="skill-tag" role="listitem">Java</span>
+                            <span class="skill-tag" role="listitem">C++</span>
+                            <span class="skill-tag" role="listitem">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card hover-effect">
+                        <h3 class="skill-category">Machine Learning</h3>
+                        <div class="skill-tags" role="list">
+                            <span class="skill-tag" role="listitem">TensorFlow</span>
+                            <span class="skill-tag" role="listitem">PyTorch</span>
+                            <span class="skill-tag" role="listitem">Scikit-learn</span>
+                            <span class="skill-tag" role="listitem">Keras</span>
+                            <span class="skill-tag" role="listitem">XGBoost</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card hover-effect">
+                        <h3 class="skill-category">Cloud & DevOps</h3>
+                        <div class="skill-tags" role="list">
+                            <span class="skill-tag" role="listitem">AWS</span>
+                            <span class="skill-tag" role="listitem">Docker</span>
+                            <span class="skill-tag" role="listitem">Kubernetes</span>
+                            <span class="skill-tag" role="listitem">CI/CD</span>
+                            <span class="skill-tag" role="listitem">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="">Get in Touch</h2>
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="contact-card hover-effect">
+              <p class="lead ">Let's collaborate on your next AI project!</p>
+              <div class="contact-info">
+                  <p>
+                      <span class="">Email:</span>
+                      <a href="mailto:pvrcharan2022@gmail.com" class="magnetic" aria-label="Send email to pvrcharan2022@gmail.com">
+                          <i class="fas fa-envelope" aria-hidden="true"></i> pvrcharan2022@gmail.com
+                      </a>
+                  </p>
+                  <p>
+                      <span class="">LinkedIn:</span>
+                      <a href="https://www.linkedin.com/in/rama-charan-50425021b/" class="magnetic" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile">
+                          <i class="fab fa-linkedin" aria-hidden="true"></i> linkedin.com/in/ramacharan
+                      </a>
+                  </p>
+              </div>
+              <div class="social-icons" aria-label="Social Media Links">
+                  <a href="https://www.linkedin.com/in/rama-charan-50425021b/" 
+                     class="social-icon magnetic" 
+                     target="_blank" 
+                     rel="noopener"
+                     aria-label="LinkedIn Profile">
+                      <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="[Your GitHub Profile URL]" 
+                     class="social-icon magnetic" 
+                     target="_blank" 
+                     rel="noopener"
+                     aria-label="GitHub Profile">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="[Your Twitter Profile URL]" 
+                     class="social-icon magnetic" 
+                     target="_blank" 
+                     rel="noopener"
+                     aria-label="Twitter Profile">
+                      <i class="fab fa-twitter" aria-hidden="true"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer class="text-center py-4">
+  <div class="container">
+      <p class="">
+          &copy; <time datetime="2024">2024</time> RamaCharan. All rights reserved. | 
+          Crafted with <i class="fas fa-heart text-danger" aria-hidden="true"></i>
+          <span class="">love</span> and AI
+      </p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+<script defer src="script.js"></script>
+
+</body>
+</html>
